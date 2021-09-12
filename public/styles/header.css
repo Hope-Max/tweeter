@@ -10,10 +10,10 @@ header {
   position: absolute;
   z-index: 0;
 }
-img {
+header h2 {
+  margin: 18px;
+}
+#avatar {
   width: 210px;
   height: 210px;
-}
-h2 {
-  margin: 18px;
 }
