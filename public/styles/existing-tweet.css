@@ -1,0 +1,74 @@
+#sub-container {
+  margin-top: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #daddd1;
+}
+#sub-container article {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: #000000 solid 2px;
+}
+#sub-container article:hover {
+  box-shadow: 4.5px 4.5px #bed7fc;
+  color: #bed7fc;
+}
+.header-tweet {
+  display: flex;
+  justify-content: space-between;
+}
+.favicon {
+  margin: 10px;
+  display: flex;
+}
+.img {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+.name {
+  color: #000000;
+}
+.handle {
+  margin: 10px;
+}
+.handle p {
+  font-weight: bold;
+  margin-right: 20px;
+}
+.text-tweet {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none;
+  border-bottom: #000000 solid 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  width: 99%;
+}
+.footer-tweet {
+  margin-bottom: 10px;
+  font-size: 15px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.timestamp {
+  margin-left: 25px;
+  color: #000000;
+}
+.timestamp p {
+  margin: 0px;
+}
+.logo {
+  margin-right: 30px;
+}
+.logo i {
+  margin-left: 10px;
+  color: #1b0892;
+}
+.logo i:hover {
+  color:burlywood;
+}

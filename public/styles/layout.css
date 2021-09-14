@@ -22,9 +22,9 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main {
-  background-color: #f4f1ec;
+#main-container {
   margin-top: 20px;
+  background-color: #f4f1ec;
   position: absolute;
   top: 400px;
   left: 5%;

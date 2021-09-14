@@ -1,4 +1,4 @@
-header {
+.main-header{
   height: 400px;
   width: 100%;
   background-color: #00d7e6;
@@ -10,7 +10,7 @@ header {
   position: absolute;
   z-index: 0;
 }
-header h2 {
+.main-header h2 {
   margin: 18px;
 }
 #avatar {
