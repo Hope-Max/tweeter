@@ -20,6 +20,8 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Add the timeago library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -29,13 +31,13 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <div><span>tweeter</span></div>
+      <span>tweeter</span>
       <div>
         <p><strong>Write</strong> a new tweet</p>
         <i id="icon" class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header class="main-header">
+    <header id="main-header">
       <div>
           <img id="avatar" src="/images/profile-hex.png"> 
       </div>
@@ -55,60 +57,7 @@
           </div>
         </form>
       </section>
-      <section id="sub-container">
-        <article>
-          <header class="header-tweet">
-            <div class="favicon">
-              <div>
-                <img class="img" src="https://i.imgur.com/73hZDYK.png"> 
-              </div>
-              <div>
-                <p class="name">Newton</p>
-              </div>
-            </div>
-            <div class="handle">
-              <p>@SirIsaac</p>
-            </div>
-          </header>
-          <textarea class="text-tweet" name="text">If I have seen further it is by standing on the shoulders of giant</textarea>
-          <footer class="footer-tweet">
-            <div class="timestamp">
-              <p>10 days ago</p>
-            </div>
-            <div class="logo">
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-heart"></i>
-            </div>
-          </footer>
-        </article>
-        <article>
-          <header class="header-tweet">
-            <div class="favicon">
-              <div>
-                <img class="img" src="https://i.imgur.com/nlhLi3I.png"> 
-              </div>
-              <div>
-                <p class="name">Descartes</p>
-              </div>
-            </div>
-            <div class="handle">
-              <p>@rd</p>
-            </div>
-          </header>
-          <textarea class="text-tweet" name="text">Je pense , donc je suis</textarea>
-          <footer class="footer-tweet">
-            <div class="timestamp">
-              <p>10 days ago</p>
-            </div>
-            <div class="logo">
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-heart"></i>
-            </div>
-          </footer>
-        </article>
-      </section>
+      <section id="sub-container"></section>
     </main>
   </body>
 </html>
