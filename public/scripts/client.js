@@ -6,31 +6,6 @@
 
 $(document).ready(function() {
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-
   const createTweetElement = function(tweet) {
 
     const $tweet = $(`
@@ -69,27 +44,45 @@ $(document).ready(function() {
 
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#sub-container').append($tweet);
+      $('#sub-container').prepend($tweet);
     }
 
   };
 
-  renderTweets(data);
-
-  // Add an event listener for sumbit and prevent its default behaviour
-  $('form').submit(function(event) {
-    event.preventDefault();
-
-    const $form = $(this);
-    console.log($form);
+  // fetch data from the server
+  const loadTweets = function() {
 
     $.ajax({
-      url: '/',
-      type: 'POST',
-      data: $form.serialize(),
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'json',
+    }).then((text) => {
+      renderTweets(text);
+    });
+    
+  };
+
+  // Add an event listener for sumbit and prevent its default behaviour
+  const postTweets = function() {
+
+    $('form').submit(function(event) {
+      event.preventDefault();
+  
+      const $form = $(this);
+      $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: $form.serialize(),
+      }).then(() => {
+        loadTweets();
+      });
+
     });
 
-    console.log($form.serialize());
-  })
+  };
+
+  $(() => {
+    postTweets();
+  });
 
 });
