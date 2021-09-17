@@ -69,6 +69,15 @@ $(document).ready(function() {
       event.preventDefault();
   
       const $form = $(this);
+      $text = $('#tweet-text').val();
+
+      // Disallow form submission when the tweet area is empty, or exceeds the 140 character limit 
+      if ($text.length === 0) {
+        return alert('Your input is empty!');
+      } else if ($text.length > 140) {
+        return alert('Your input exceeds the character limit!');
+      }
+
       $.ajax({
         url: '/tweets',
         method: 'POST',
@@ -77,8 +86,11 @@ $(document).ready(function() {
         loadTweets();
       });
 
-    });
+      $('#tweet-text').val('');
+      $('.counter').val('140');
 
+    });
+    
   };
 
   $(() => {
