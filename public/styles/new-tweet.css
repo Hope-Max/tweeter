@@ -25,11 +25,19 @@
   resize: none;
 }
 #button {
-  border-width: 0px;
+  margin: 2px;
+  border: 0px solid #ffffff;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   padding-left: 0.4em;
   padding-right: 0.4em;
   background-color: #4056a1;
   color: #FFFFFF;
+}
+#button:hover {
+  box-shadow: 0px 0px 2px 4px #bed7fc;
+}
+.counter {
+  display: flex;
+  align-items: center;
 }
