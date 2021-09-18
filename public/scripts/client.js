@@ -40,12 +40,10 @@ $(document).ready(function() {
     return $tweet;
   };
   
-  const renderTweets = function(tweets) {
+  const renderTweets = function(tweet) {
 
-    for (let tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      $('#sub-container').prepend($tweet);
-    }
+    const $tweet = createTweetElement(tweet);
+    $('#sub-container').prepend($tweet);
 
   };
 
@@ -57,7 +55,9 @@ $(document).ready(function() {
       method: 'GET',
       dataType: 'json',
     }).then((text) => {
-      renderTweets(text);
+      const index = text.length - 1;
+      const tweet = text[index];
+      renderTweets(tweet);
     });
     
   };
