@@ -24,4 +24,16 @@ nav span {
 }
 #icon {
   color: crimson;
+  animation: move 0.8s infinite;
+  animation-direction: alternate;
+}
+@keyframes move {
+  0%
+  {
+    transform: translateY(0px);
+  }
+  100%
+  {
+    transform: translateY(10px);
+  }
 }
