@@ -10,8 +10,8 @@
   border: #000000 solid 2px;
 }
 #sub-container article:hover {
-  box-shadow: 4.5px 4.5px #bed7fc;
-  color: #bed7fc;
+  box-shadow: 4.5px 4.5px #6991ce;
+  color: #6991ce;
 }
 .header-tweet {
   display: flex;

@@ -93,7 +93,7 @@ $(document).ready(function() {
     
   };
 
-  // Add an event listener for sumbit and prevent its default behaviour
+  // Post data to the server
   const postTweets = function() {
 
     $('form').submit(function(event) {
@@ -108,6 +108,7 @@ $(document).ready(function() {
         const errorMessage = '⚠️Your input is empty!⚠️';
         // Insert the error message text into the error element
         $('#error-message').text(errorMessage);
+        // Slide down the error message
         return $('#error-message').slideDown();
       } else if ($text.length > 140) {
         const errorMessage = '⚠️Your input exceeds the character limit!⚠️';
@@ -129,13 +130,31 @@ $(document).ready(function() {
     });
     
   };
+  postTweets();
 
+  // Slide up the error message
   $('#tweet-text').click(function() {
-    return $('#error-message').slideUp();
+    $('#error-message').slideUp();
   });
 
-  $(() => {
-    postTweets();
-  });
+  // Slide the whole new-tweet section up or down when the button is clicked
+  const slideNewTweet = function() {
+
+    let count = 1;
+    $('#write-tweet').click(function() {
+
+      if (count === 1) {
+        $('.new-tweet').slideUp();
+        count = 0;
+      } else {
+        $('.new-tweet').slideDown();
+        count = 1;
+        // enable the textarea automatically
+        $('#tweet-text').trigger('focus');
+      }
+      
+    });
+  };
+  slideNewTweet();
 
 });

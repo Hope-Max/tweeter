@@ -11,29 +11,58 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-nav p {
-  margin: 1px;
+nav button {
+  margin-left: 15px;
+  border-radius: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: #FFFFFF;
 }
-nav div {
-  text-align: center;
+nav button:hover {
+  background-color: #4f6cc5;
+}
+.button-area {
+  display: flex;
+  align-items: center;
 }
 nav span {
   font-family: 'Bungee', cursive;
   font-size: 40px;
   line-height: 50px;
 }
-#icon {
+#arrow {
+  position: absolute;
+  right: 140px;
   color: crimson;
-  animation: move 0.8s infinite;
+  animation: move-arrow 0.5s infinite;
   animation-direction: alternate;
 }
-@keyframes move {
+@keyframes move-arrow {
   0%
   {
     transform: translateY(0px);
   }
   100%
   {
-    transform: translateY(10px);
+    transform: translateY(5px);
+  }
+}
+#finger {
+  color: red;
+  animation: move-finger 0.5s infinite;
+  animation-direction: alternate;
+}
+@keyframes move-finger {
+  0%
+  {
+    transform: translateX(0px);
+  }
+  100%
+  {
+    transform: translateX(8px);
   }
 }
