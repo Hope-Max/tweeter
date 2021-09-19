@@ -9,7 +9,7 @@
 .new-tweet label {
   font-weight: bold;
 }
-.new-tweet div {
+.button-container {
   font-family: 'Bungee', cursive;
   display: flex;
   justify-content: space-between;
@@ -40,4 +40,12 @@
 .counter {
   display: flex;
   align-items: center;
+}
+#error-message {
+  border: solid 2px red;
+  padding: 10px;
+  display: none;
+  color: white;
+  background-color: red;
+  font-weight: bold;
 }

@@ -6,6 +6,12 @@
 
 $(document).ready(function() {
 
+  const escape = function(str) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweet) {
 
     const $tweet = $(`
@@ -23,7 +29,7 @@ $(document).ready(function() {
             <p>${tweet.user.handle}</p>
           </div>
         </header>
-        <textarea class="text-tweet" name="text">${tweet.content.text}</textarea>
+        <textarea class="text-tweet" name="text">${escape(tweet.content.text)}</textarea>
         <footer class="footer-tweet">
           <div class="timestamp">
             <p>${timeago.format(tweet.created_at)}</p>
@@ -98,9 +104,15 @@ $(document).ready(function() {
 
       // Disallow form submission when the tweet area is empty, or exceeds the 140 character limit 
       if ($text.length === 0) {
-        return alert('Your input is empty!');
+        // Define an error message
+        const errorMessage = '⚠️Your input is empty!⚠️';
+        // Insert the error message text into the error element
+        $('#error-message').text(errorMessage);
+        return $('#error-message').slideDown();
       } else if ($text.length > 140) {
-        return alert('Your input exceeds the character limit!');
+        const errorMessage = '⚠️Your input exceeds the character limit!⚠️';
+        $('#error-message').text(errorMessage);
+        return $('#error-message').slideDown();
       }
 
       $.ajax({
@@ -117,6 +129,10 @@ $(document).ready(function() {
     });
     
   };
+
+  $('#tweet-text').click(function() {
+    return $('#error-message').slideUp();
+  });
 
   $(() => {
     postTweets();
