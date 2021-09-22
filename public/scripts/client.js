@@ -100,9 +100,9 @@ $(document).ready(function() {
       event.preventDefault();
   
       const $form = $(this);
-      $text = $('#tweet-text').val();
+      $text = $('.new-tweet textarea').val();
 
-      // Disallow form submission when the tweet area is empty, or exceeds the 140 character limit 
+      // Disallow form submission when the tweet area is empty, or exceeds the 140 character limit
       if ($text.length === 0) {
         // Define an error message
         const errorMessage = '⚠️Your input is empty!⚠️';
@@ -124,8 +124,8 @@ $(document).ready(function() {
         loadTweets();
       });
 
-      $('#tweet-text').val('');
-      $('.counter').val('140');
+      $('.new-tweet textarea').val('');
+      $('#counter').val('140');
 
     });
     
@@ -133,7 +133,7 @@ $(document).ready(function() {
   postTweets();
 
   // Slide up the error message
-  $('#tweet-text').click(function() {
+  $('.new-tweet textarea').click(function() {
     $('#error-message').slideUp();
   });
 
@@ -150,7 +150,7 @@ $(document).ready(function() {
         $('.new-tweet').slideDown();
         count = 1;
         // enable the textarea automatically
-        $('#tweet-text').trigger('focus');
+        $('.new-tweet textarea').trigger('focus');
       }
       
     });

@@ -1,62 +1,42 @@
-nav {
-  padding: 1.5em;
+#main-nav {
+  padding: 0 36px;
   height: 100px;
   width: 100%;
   background-color: #4056a1;
   color: #FFFFFF;
-  position: absolute;
   z-index: 1;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-nav button {
+#main-nav button {
   margin-left: 15px;
   border-radius: 30px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding: 4px 20px;
   background-color: transparent;
   border: 1px solid white;
   color: #FFFFFF;
 }
-nav button:hover {
+#main-nav button:hover {
   background-color: #4f6cc5;
 }
-.button-area {
+#main-nav span {
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+  height: 40px;
+}
+#main-nav div {
   display: flex;
   align-items: center;
 }
-nav span {
-  font-family: 'Bungee', cursive;
-  font-size: 40px;
-  line-height: 50px;
-}
-#arrow {
-  position: absolute;
-  right: 140px;
-  color: crimson;
-  animation: move-arrow 0.5s infinite;
-  animation-direction: alternate;
-}
-@keyframes move-arrow {
-  0%
-  {
-    transform: translateY(0px);
-  }
-  100%
-  {
-    transform: translateY(5px);
-  }
-}
-#finger {
+#main-nav i {
   color: red;
-  animation: move-finger 0.5s infinite;
+  animation: move 0.5s infinite;
   animation-direction: alternate;
 }
-@keyframes move-finger {
+@keyframes move {
   0%
   {
     transform: translateX(0px);

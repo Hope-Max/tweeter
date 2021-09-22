@@ -4,12 +4,12 @@ $(document).ready(function() {
   $(window).scroll(function() {
     const scrollTop = $(window).scrollTop();
 
-    if (scrollTop >= 350) {
+    if (scrollTop > 100) {
       $("#scroll-up-button").show();
-      $(".button-area").hide();
+      $("#main-nav div").hide();
     } else {
       $("#scroll-up-button").hide();
-      $(".button-area").show();
+      $("#main-nav div").show();
     }
 
   });
@@ -17,6 +17,6 @@ $(document).ready(function() {
   $('#scroll-up-button').click(function() {
     $('html, body').animate({scrollTop: 0});
     $('.new-tweet').slideDown();
-    $('#tweet-text').trigger('focus');
+    $('.new-tweet textarea').trigger('focus');
   });
 });

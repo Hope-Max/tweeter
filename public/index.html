@@ -32,42 +32,42 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav id="main-nav">
       <span>tweeter</span>
       <div>
-        <div class="button-area">
-          <i id='finger' class="far fa-hand-point-right"></i>
-          <button id="write-tweet" type="submit"><strong>Write</strong> a new tweet</button>
-        </div>
+        <i class="far fa-hand-point-right"></i>
+        <button id="write-tweet" type="submit"><strong>Write</strong> a new tweet</button>
       </div>
     </nav>
-    <header id="main-header">
-      <div>
-          <img id="avatar" src="/images/profile-hex.png"> 
-      </div>
-      <div>
-          <h2>Hannah Shi</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main id="main-container">
-      <section class="new-tweet">
+    <div id="content">
+      <header id="main-header">
         <div>
-          <p id="error-message"></p>
+            <img src="/images/profile-hex.png"> 
         </div>
-        <form action="/tweets/" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="button-container">
-            <button id="button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+        <div>
+            <h2>Hannah Shi</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main id="main-container">
+        <section class="new-tweet">
+          <div>
+            <p id="error-message"></p>
           </div>
-        </form>
-      </section>
-      <section id="sub-container"></section>
-      <button id="scroll-up-button">
-        <i id="double-up-angle" class="fas fa-angle-double-up"></i>
-      </button>
-    </main>
+          <form action="/tweets/" method="POST">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text"></textarea>
+            <div class="button-container">
+              <button type="submit">Tweet</button>
+              <output name="counter" id="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id="sub-container"></section>
+        <button id="scroll-up-button">
+          <i id="double-up-angle" class="fas fa-angle-double-up"></i>
+        </button>  
+      </main>
+    </div>
   </body>
 </html>
