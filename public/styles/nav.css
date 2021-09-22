@@ -23,7 +23,7 @@
   background-color: #4f6cc5;
 }
 #main-nav span {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   font-size: 40px;
   height: 40px;
 }
@@ -36,13 +36,12 @@
   animation: move 0.5s infinite;
   animation-direction: alternate;
 }
+
 @keyframes move {
-  0%
-  {
+  0% {
     transform: translateX(0px);
   }
-  100%
-  {
+  100% {
     transform: translateX(8px);
   }
 }

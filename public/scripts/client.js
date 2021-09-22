@@ -18,12 +18,8 @@ $(document).ready(function() {
       <article>
         <header class="header-tweet">
           <div class="favicon">
-            <div>
-              <img class="img" src=${tweet.user.avatars}> 
-            </div>
-            <div>
-              <p class="name">${tweet.user.name}</p>
-            </div>
+            <img src=${tweet.user.avatars}> 
+            <p>${tweet.user.name}</p>
           </div>
           <div class="handle">
             <p>${tweet.user.handle}</p>
