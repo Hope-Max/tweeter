@@ -30,3 +30,18 @@ body {
   left: 5%;
   right: 5%;
 }
+@media screen and (min-width: 1024px) {
+  #content {
+    left: 5%;
+    right: 5%;
+    position: absolute;
+    top: 200px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #main-container {
+    margin: 0;
+    width: 60%;
+    position: static;
+  }
+}
