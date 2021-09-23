@@ -6,13 +6,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["screenshot of "]()
-!["screenshot of "]()
-!["screenshot of "]()
-!["screenshot of "]()
-!["screenshot of "]()
-!["screenshot of "]()
-!["screenshot of "]()
+!["screenshot of initialization page"](https://github.com/Hope-Max/tweeter/blob/master/docs/Initialization-page.png?raw=true)
+!["screenshot of new tweets"](https://github.com/Hope-Max/tweeter/blob/master/docs/New-tweets.png?raw=true)
+!["screenshot of new tweets hidden"](https://github.com/Hope-Max/tweeter/blob/master/docs/New-tweets-hidden.png?raw=true)
+!["screenshot of error message"](https://github.com/Hope-Max/tweeter/blob/master/docs/Error-message1.png?raw=true)
+!["screenshot of error message"](https://github.com/Hope-Max/tweeter/blob/master/docs/Error-message2.png?raw=true)
+!["screenshot of scroll-up button"](https://github.com/Hope-Max/tweeter/blob/master/docs/Scroll-up-button.png?raw=true)
+!["screenshot of responsive design"](https://github.com/Hope-Max/tweeter/blob/master/docs/Responsive-design.png?raw=true)
 
 ## Description
 
