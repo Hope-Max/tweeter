@@ -43,7 +43,7 @@ $(document).ready(function() {
   };
   
   const renderTweets = function(tweets) {
-    console.log(tweets);
+
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('#sub-container').prepend($tweet);  
@@ -59,6 +59,7 @@ $(document).ready(function() {
       method: 'GET',
       dataType: 'JSON',
     }).then((text) => {
+      $('#sub-container').text('');
       renderTweets(text);
     });
     
